@@ -8,31 +8,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">Accueil</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="Parcours.html">Parcours</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="Certifications.html">Certifications</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="Compétence.html">Compétence</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="E5.html">E5</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+<?php require_once("navbar.php"); ?>
 
 <div class="container text-center mt-5">
     <div class="row align-items-center">
