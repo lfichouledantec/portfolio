@@ -2,49 +2,72 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Epreuve E5 | Louri Fichou</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light">
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">Accueil</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="Parcours.html">Parcours</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="Certifications.html">Certifications</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="Compétence.html">Compétence</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="E5.html">E5</a>
-      </li>
-    </ul>
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Louri Fichou</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="Parcours.html">Parcours</a></li>
+        <li class="nav-item"><a class="nav-link" href="Compétence.html">Compétences</a></li>
+        <li class="nav-item active"><a class="nav-link" href="E5.html">E5 (Projets)</a></li>
+        <li class="nav-item"><a class="nav-link" href="Certifications.html">Certifications</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
-<div class="container text-center my-5">
-    <h1>Bienvenue sur ma page E5 ! test</h1>
+<div class="container my-5">
+    <div class="jumbotron shadow">
+        <h1 class="display-4">Portefeuille de compétences (E5)</h1>
+        <p class="lead">Réalisations professionnelles liées au Bloc 1 : Support et mise à disposition de services informatiques.</p>
+        <hr class="my-4">
+        <a class="btn btn-danger btn-lg" href="images/tableau-de-synthese.pdf" target="_blank">Télécharger le tableau de synthèse</a>
+    </div>
+
+    <div class="row">
+        <!-- Réalisation 1 -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 border-primary shadow-sm">
+                <div class="card-header bg-primary text-white">Réalisation Orange Innov</div>
+                <div class="card-body">
+                    <h5 class="card-title">Scripts d'automatisation API (Python)</h5>
+                    <p>Création de scripts permettant d'interroger des APIs REST pour automatiser la récupération de données techniques.</p>
+                    <p><strong>Compétences mobilisées :</strong></p>
+                    <ul>
+                        <li>Gérer le patrimoine informatique</li>
+                        <li>Développer la présence en ligne de l'organisation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Réalisation 2 -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 border-dark shadow-sm">
+                <div class="card-header bg-dark text-white">Projet Collaboratif (Godot)</div>
+                <div class="card-body">
+                    <h5 class="card-title">Développement de jeux 2D/3D</h5>
+                    <p>Développement en équipe via Git/GitHub. Mise en place d'un moteur physique et gestion de projet Agile.</p>
+                    <p><strong>Compétences mobilisées :</strong></p>
+                    <ul>
+                        <li>Travailler en mode projet</li>
+                        <li>Organiser son développement professionnel</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert alert-info text-center">
+        Note : Un portfolio non présenté le jour de l'examen entraîne une pénalité de -10 points à l'épreuve E5.
+    </div>
 </div>
-
-<footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2025</p>
-</footer>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>

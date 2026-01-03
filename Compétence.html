@@ -2,49 +2,59 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Compétences | Louri Fichou</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">Accueil</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="Parcours.html">Parcours</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="Certifications.html">Certifications</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="Compétence.html">Compétence</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="E5.html">E5</a>
-      </li>
-    </ul>
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Louri Fichou</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="Parcours.html">Parcours</a></li>
+        <li class="nav-item active"><a class="nav-link" href="Compétence.html">Compétences</a></li>
+        <li class="nav-item"><a class="nav-link" href="E5.html">E5 (Projets)</a></li>
+        <li class="nav-item"><a class="nav-link" href="Certifications.html">Certifications</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
-<div class="container text-center my-5">
-    <h1>Bienvenue sur ma page Competence !test 2</h1>
+<div class="container my-5">
+    <h2 class="text-center mb-5">Compétences Informatiques</h2>
+
+    <div class="row">
+        <!-- Langages -->
+        <div class="col-md-6 mb-4">
+            <h4 class="mb-4">Langages de programmation</h4>
+            <p class="mb-1">Python (Autodidacte - 6 ans)</p>
+            <div class="progress mb-3"><div class="progress-bar bg-success" style="width: 95%"></div></div>
+            
+            <p class="mb-1">C# / .NET</p>
+            <div class="progress mb-3"><div class="progress-bar bg-primary" style="width: 70%"></div></div>
+            
+            <p class="mb-1">PHP / SQL</p>
+            <div class="progress mb-3"><div class="progress-bar bg-info" style="width: 75%"></div></div>
+            
+            <p class="mb-1">JavaScript</p>
+            <div class="progress mb-3"><div class="progress-bar bg-warning" style="width: 60%"></div></div>
+        </div>
+
+        <!-- Outils -->
+        <div class="col-md-6">
+            <h4 class="mb-4">Logiciels & Environnements</h4>
+            <div class="list-group">
+                <div class="list-group-item"><strong>IDE :</strong> VS Code, Visual Studio</div>
+                <div class="list-group-item"><strong>Versionning :</strong> Git, GitHub, GitLab</div>
+                <div class="list-group-item"><strong>Moteurs de jeux :</strong> Unity, Godot</div>
+                <div class="list-group-item"><strong>Conteneurisation :</strong> Docker</div>
+                <div class="list-group-item"><strong>Méthodologie :</strong> Agile (Trello)</div>
+            </div>
+        </div>
+    </div>
 </div>
-
-<footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2025</p>
-</footer>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>

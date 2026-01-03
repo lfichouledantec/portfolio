@@ -3,59 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Louri Fichou | Portfolio BTS SIO</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        .hero-section { background: #f8f9fa; padding: 100px 0; border-bottom: 1px solid #dee2e6; }
+        .profile-img { width: 250px; height: 250px; object-fit: cover; border: 5px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="/portfolio/index.html">Accueil</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/portfolio/Parcours.html">Parcours</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/portfolio/Certifications.html">Certifications</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/portfolio/Compétence.html">Compétence</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/portfolio/E5.html">E5</a>
-      </li>
-    </ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Louri Fichou</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"><a class="nav-link" href="index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="Parcours.html">Parcours</a></li>
+        <li class="nav-item"><a class="nav-link" href="Compétence.html">Compétences</a></li>
+        <li class="nav-item"><a class="nav-link" href="E5.html">E5 (Projets)</a></li>
+        <li class="nav-item"><a class="nav-link" href="Certifications.html">Certifications</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
-<div class="container text-center mt-5">
-    <div class="row align-items-center">
-      <div class="col-md-4">
-        <img src="images/index.webp" alt="Photo de profil" class="rounded-circle img-fluid" style="width: 200px; height: 200px; object-fit: cover;">
-      </div>
-      <div class="col-md-8">
-        <h1>Bienvenue sur mon portfolio</h1>
-        <p>
-          Bonjour ! Je suis un développeur web et je developpe aussi des logiciel et appli. Découvrez ci-dessous quelques-uns de mes projets web.
-        </p>
-        <a href="images/CV.pdf" download>Télécharger le CV en PDF</a>
-      </div>
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+                <img src="images/index.webp" alt="Louri Fichou" class="rounded-circle profile-img mb-4">
+            </div>
+            <div class="col-md-8">
+                <h1 class="display-4 font-weight-bold">Louri Fichou</h1>
+                <h3 class="text-primary mb-3">Développeur Informatique - Option SLAM</h3>
+                <p class="lead">Bienvenue sur mon portfolio professionnel. Étudiant en BTS SIO, je me spécialise dans la création d'applications logicielles, le développement web et l'automatisation via Python.</p>
+                <div class="mt-4">
+                    <a href="images/CV.pdf" class="btn btn-primary btn-lg shadow" download><i class="fas fa-file-download"></i> Télécharger mon CV</a>
+                    <a href="mailto:louri.f@orange.fr" class="btn btn-outline-dark btn-lg ml-2"><i class="fas fa-envelope"></i> Me contacter</a>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+</section>
 
-<footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2025</p>
+<footer class="bg-dark text-white text-center py-4">
+    <p class="mb-0">&copy; 2025 - Louri Fichou | Portfolio BTS SIO</p>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 </body>
 </html>
