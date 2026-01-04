@@ -2,9 +2,19 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certifications | Louri Fichou</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        .cert-card { transition: transform 0.3s; border: none; border-radius: 15px; }
+        .cert-card:hover { transform: translateY(-10px); }
+        .icon-box { width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+        .bg-anssi { background-color: #e3f2fd; color: #0d47a1; }
+        .bg-cnil { background-color: #f3e5f5; color: #4a148c; }
+        .bg-cisco { background-color: #e8f5e9; color: #1b5e20; }
+        .bg-rootme { background-color: #ffebee; color: #b71c1c; }
+    </style>
 </head>
 <body class="bg-light">
 
@@ -23,35 +33,104 @@
   </div>
 </nav>
 
-<div class="container my-5 text-center">
-    <h2 class="mb-5 font-weight-bold">Mes Certifications</h2>
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h2 class="font-weight-bold">Mes Certifications & MOOCs</h2>
+        <p class="text-muted">Formations complémentaires suivies en autonomie pour approfondir mes compétences en cybersécurité et conformité.</p>
+    </div>
+
     <div class="row">
-        <div class="col-md-3 mb-4">
-            <div class="card shadow-sm p-4 border-info">
-                <i class="fas fa-shield-alt fa-3x text-info mb-3"></i>
-                <h6>ANSSI SecNum</h6>
+        <!-- ANSSI -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm cert-card h-100 p-4">
+                <div class="d-flex align-items-start">
+                    <div class="icon-box bg-anssi mr-3">
+                        <i class="fas fa-shield-alt fa-2x"></i>
+                    </div>
+                    <div>
+                        <h5 class="font-weight-bold">ANSSI - SecNumAcadémie</h5>
+                        <p class="text-muted small">Mooc de sensibilisation à la cybersécurité</p>
+                        <ul class="small pl-3">
+                            <li>Panorama de la SSI / Sécurité de l'authentification</li>
+                            <li>Sécurité de l'Internet / Sécurité du poste de travail</li>
+                            <li>Sécurité du nomadisme</li>
+                        </ul>
+                        <span class="badge badge-primary">Validé</span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-md-3 mb-4">
-            <div class="card shadow-sm p-4 border-primary">
-                <i class="fas fa-user-lock fa-3x text-primary mb-3"></i>
-                <h6>Atelier CNIL RGPD</h6>
+
+        <!-- CNIL -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm cert-card h-100 p-4">
+                <div class="d-flex align-items-start">
+                    <div class="icon-box bg-cnil mr-3">
+                        <i class="fas fa-user-lock fa-2x"></i>
+                    </div>
+                    <div>
+                        <h5 class="font-weight-bold">CNIL - L'Atelier RGPD</h5>
+                        <p class="text-muted small">Conformité des données personnelles</p>
+                        <ul class="small pl-3">
+                            <li>Le RGPD et ses notions clés</li>
+                            <li>Les principes de la protection des données</li>
+                            <li>Les obligations des professionnels</li>
+                            <li>Les rôles du DPO et mesures de sécurité</li>
+                        </ul>
+                        <span class="badge badge-purple" style="background: #4a148c; color: white;">Certifié</span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-md-3 mb-4">
-            <div class="card shadow-sm p-4 border-dark">
-                <i class="fas fa-network-wired fa-3x text-dark mb-3"></i>
-                <h6>CISCO Academy</h6>
+
+        <!-- CISCO -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm cert-card h-100 p-4">
+                <div class="d-flex align-items-start">
+                    <div class="icon-box bg-cisco mr-3">
+                        <i class="fas fa-network-wired fa-2x"></i>
+                    </div>
+                    <div>
+                        <h5 class="font-weight-bold">CISCO Networking Academy</h5>
+                        <p class="text-muted small">Introduction à la Cybersécurité</p>
+                        <ul class="small pl-3">
+                            <li>Types de menaces et vulnérabilités réseau</li>
+                            <li>Protection des données et de la confidentialité</li>
+                            <li>Procédés de défense et de détection des intrusions</li>
+                        </ul>
+                        <span class="badge badge-success">Certifié</span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-md-3 mb-4">
-            <div class="card shadow-sm p-4 border-danger">
-                <i class="fas fa-terminal fa-3x text-danger mb-3"></i>
-                <h6>Root-Me</h6>
+
+        <!-- Root-Me -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm cert-card h-100 p-4">
+                <div class="d-flex align-items-start">
+                    <div class="icon-box bg-rootme mr-3">
+                        <i class="fas fa-terminal fa-2x"></i>
+                    </div>
+                    <div>
+                        <h5 class="font-weight-bold">Root-Me (Hacking & Challenge)</h5>
+                        <p class="text-muted small">Plateforme d'entraînement à la sécurité informatique</p>
+                        <p class="small">Résolution de challenges pratiques :</p>
+                        <div class="d-flex flex-wrap">
+                            <span class="badge badge-outline-dark border mr-1 mb-1">Web-Client</span>
+                            <span class="badge badge-outline-dark border mr-1 mb-1">App-Script</span>
+                            <span class="badge badge-outline-dark border mr-1 mb-1">Network</span>
+                        </div>
+                        <p class="mt-2 mb-0"><a href="https://www.root-me.org/" target="_blank" class="btn btn-sm btn-danger">Voir mon profil</a></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<footer class="bg-dark text-white text-center py-4">
+    <p class="mb-0">© 2026 - Louri Fichou</p>
+</footer>
 
 </body>
 </html>
