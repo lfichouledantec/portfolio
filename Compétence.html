@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>Compétences | Louri Fichou</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
-<body>
+<body class="bg-light">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container">
     <a class="navbar-brand" href="index.html">Louri Fichou</a>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -15,7 +16,7 @@
         <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
         <li class="nav-item"><a class="nav-link" href="Parcours.html">Parcours</a></li>
         <li class="nav-item active"><a class="nav-link" href="Compétence.html">Compétences</a></li>
-        <li class="nav-item"><a class="nav-link" href="E5.html">E5 (Projets)</a></li>
+        <li class="nav-item"><a class="nav-link" href="E5.html">E5</a></li>
         <li class="nav-item"><a class="nav-link" href="Certifications.html">Certifications</a></li>
       </ul>
     </div>
@@ -23,35 +24,25 @@
 </nav>
 
 <div class="container my-5">
-    <h2 class="text-center mb-5">Compétences Informatiques</h2>
-
+    <h2 class="text-center mb-5 font-weight-bold">Compétences Techniques</h2>
     <div class="row">
-        <!-- Langages -->
         <div class="col-md-6 mb-4">
-            <h4 class="mb-4">Langages de programmation</h4>
-            <p class="mb-1">Python (Autodidacte - 6 ans)</p>
-            <div class="progress mb-3"><div class="progress-bar bg-success" style="width: 95%"></div></div>
-            
-            <p class="mb-1">C# / .NET</p>
-            <div class="progress mb-3"><div class="progress-bar bg-primary" style="width: 70%"></div></div>
-            
+            <h4>Langages</h4>
+            <p class="mb-1">Python (Expert - 6 ans)</p>
+            <div class="progress mb-3"><div class="progress-bar bg-primary" style="width: 95%"></div></div>
+            <p class="mb-1">C# / Unity / Godot</p>
+            <div class="progress mb-3"><div class="progress-bar bg-primary" style="width: 80%"></div></div>
             <p class="mb-1">PHP / SQL</p>
-            <div class="progress mb-3"><div class="progress-bar bg-info" style="width: 75%"></div></div>
-            
-            <p class="mb-1">JavaScript</p>
-            <div class="progress mb-3"><div class="progress-bar bg-warning" style="width: 60%"></div></div>
+            <div class="progress mb-3"><div class="progress-bar bg-primary" style="width: 70%"></div></div>
         </div>
-
-        <!-- Outils -->
         <div class="col-md-6">
-            <h4 class="mb-4">Logiciels & Environnements</h4>
-            <div class="list-group">
-                <div class="list-group-item"><strong>IDE :</strong> VS Code, Visual Studio</div>
-                <div class="list-group-item"><strong>Versionning :</strong> Git, GitHub, GitLab</div>
-                <div class="list-group-item"><strong>Moteurs de jeux :</strong> Unity, Godot</div>
-                <div class="list-group-item"><strong>Conteneurisation :</strong> Docker</div>
-                <div class="list-group-item"><strong>Méthodologie :</strong> Agile (Trello)</div>
-            </div>
+            <h4>Outils & Sécurité</h4>
+            <ul class="list-group shadow-sm">
+                <li class="list-group-item"><i class="fas fa-check text-success"></i> Git / GitLab / GitHub</li>
+                <li class="list-group-item"><i class="fas fa-check text-success"></i> Docker & CI/CD</li>
+                <li class="list-group-item"><i class="fas fa-check text-success"></i> Cybersécurité (Root-Me / ANSSI)</li>
+                <li class="list-group-item"><i class="fas fa-check text-success"></i> RGPD (Atelier CNIL)</li>
+            </ul>
         </div>
     </div>
 </div>
