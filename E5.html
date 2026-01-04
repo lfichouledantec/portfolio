@@ -2,65 +2,146 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>E5 | Louri Fichou</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louri Fichou | Accueil</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        .hero-section { background: #f8f9fa; padding: 60px 0; }
+        .profile-img { width: 220px; height: 220px; object-fit: cover; border: 5px solid white; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .project-card { transition: transform 0.2s; border: none; border-radius: 10px; }
+        .project-card:hover { transform: scale(1.02); }
+        .section-title { position: relative; padding-bottom: 15px; margin-bottom: 30px; }
+        .section-title::after { content: ''; width: 50px; height: 3px; background: #007bff; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+    </style>
 </head>
-<body class="bg-light">
+<body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container">
     <a class="navbar-brand" href="index.html">Louri Fichou</a>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+        <li class="nav-item active"><a class="nav-link" href="index.html">Accueil</a></li>
         <li class="nav-item"><a class="nav-link" href="Parcours.html">Parcours</a></li>
         <li class="nav-item"><a class="nav-link" href="Compétence.html">Compétences</a></li>
-        <li class="nav-item active"><a class="nav-link" href="E5.html">E5</a></li>
+        <li class="nav-item"><a class="nav-link" href="E5.html">E5</a></li>
         <li class="nav-item"><a class="nav-link" href="Certifications.html">Certifications</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="container my-5">
-    <div class="jumbotron shadow border bg-white">
-        <h1 class="display-4 font-weight-bold">Épreuve E5</h1>
-        <p class="lead">Réalisations professionnelles pour le Bloc 1.</p>
-        <hr class="my-4">
-        <p>Accédez à mon document officiel de synthèse :</p>
-        <a class="btn btn-success btn-lg shadow-sm" href="images/Tableau de synthese - Epreuve E5 - BTS SIO 2026.xlsx" download>
-            <i class="fas fa-file-excel"></i> Télécharger le Tableau de Synthèse
-        </a>
+<!-- Section Présentation -->
+<section class="hero-section text-center text-md-left">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+                <img src="images/index.webp" alt="Louri Fichou" class="rounded-circle profile-img mb-4">
+            </div>
+            <div class="col-md-8">
+                <h1 class="display-4 font-weight-bold">Louri Fichou</h1>
+                <h3 class="text-primary">Développeur Informatique - BTS SIO SLAM</h3>
+                <p class="lead mt-3">Spécialisé en développement Python et C#, avec une forte culture en cybersécurité (ANSSI, RGPD, Root-Me).</p>
+                <div class="mt-4">
+                    <!-- Vérifie que ton fichier s'appelle exactement CV.pdf dans le dossier images -->
+                    <a href="images/CV.pdf" class="btn btn-primary btn-lg shadow-sm" download><i class="fas fa-file-pdf"></i> Télécharger CV</a>
+                    <a href="#projets" class="btn btn-outline-dark btn-lg ml-md-2">Découvrir mes projets</a>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
 
-    <div class="row">
-        <div class="col-md-6 mb-4">
-            <div class="card h-100 shadow-sm border-primary">
-                <div class="card-header bg-primary text-white font-weight-bold">Orange Innov</div>
-                <div class="card-body">
-                    <h5>Automatisation API (Python)</h5>
-                    <p>Optimisation des processus techniques via des scripts Python.</p>
-                    <span class="badge badge-primary">Compétences : B1.1, B1.3</span>
+<!-- Section Mes Projets -->
+<section id="projets" class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center font-weight-bold section-title">Mes Projets</h2>
+        
+        <!-- Projets de formation -->
+        <h4 class="mb-4 text-muted"><i class="fas fa-graduation-cap"></i> Formation & Académique</h4>
+        <div class="row">
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 shadow-sm project-card">
+                    <div class="card-body">
+                        <h6 class="font-weight-bold text-primary">Projet EGNARO</h6>
+                        <p class="small text-muted">Hébergement site web egnaro.</p>
+                        <p class="card-text">Projet x : [Ton explication ici...]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 shadow-sm project-card">
+                    <div class="card-body">
+                        <h6 class="font-weight-bold text-primary">Métiers BTS SIO</h6>
+                        <p class="small text-muted">Étude des débouchés.</p>
+                        <p class="card-text">Projet x : [Ton explication ici...]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 shadow-sm project-card">
+                    <div class="card-body">
+                        <h6 class="font-weight-bold text-primary">FLD Animation</h6>
+                        <p class="small text-muted">Animation au sein du lycée.</p>
+                        <p class="card-text">Projet x : [Ton explication ici...]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 shadow-sm project-card">
+                    <div class="card-body">
+                        <h6 class="font-weight-bold text-primary">Jeux semaine LDC</h6>
+                        <p class="small text-muted">Développement de mini-jeux.</p>
+                        <p class="card-text">Projet x : [Ton explication ici...]</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-6 mb-4">
-            <div class="card h-100 shadow-sm border-info">
-                <div class="card-header bg-info text-white font-weight-bold">Veille & Cyber</div>
-                <div class="card-body">
-                    <h5>Auto-formation continue</h5>
-                    <p>ANSSI, RGPD, Cisco et challenges Root-Me.</p>
-                    <span class="badge badge-info">Compétences : B1.6</span>
+
+        <!-- Réalisations en milieu professionnel -->
+        <h4 class="mt-4 mb-4 text-muted"><i class="fas fa-briefcase"></i> Expériences chez Orange Innov</h4>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm project-card border-left border-info">
+                    <div class="card-body">
+                        <h6 class="font-weight-bold text-info">Projet Status CI/CD</h6>
+                        <p class="small text-muted">Automatisation et déploiement.</p>
+                        <p class="card-text">Projet x : [Ton explication ici...]</p>
+                    </div>
                 </div>
             </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm project-card border-left border-info">
+                    <div class="card-body">
+                        <h6 class="font-weight-bold text-info">Rapport d'activité</h6>
+                        <p class="small text-muted">Automatisation des rapports d'équipe.</p>
+                        <p class="card-text">Projet x : [Ton explication ici...]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm project-card border-left border-info">
+                    <div class="card-body">
+                        <h6 class="font-weight-bold text-info">Bandeau information</h6>
+                        <p class="small text-muted">Composant d'affichage dynamique.</p>
+                        <p class="card-text">Projet x : [Ton explication ici...]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="E5.html" class="btn btn-outline-primary">Détails techniques (Tableau E5)</a>
         </div>
     </div>
-</div>
+</section>
 
 <footer class="bg-dark text-white text-center py-4">
     <p class="mb-0">© 2026 - Louri Fichou</p>
 </footer>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
