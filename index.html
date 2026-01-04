@@ -3,134 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certifications | Louri Fichou</title>
+    <title>Louri Fichou | Accueil</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <style>
-        .cert-card { transition: transform 0.3s; border: none; border-radius: 15px; }
-        .cert-card:hover { transform: translateY(-10px); }
-        .icon-box { width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
-        .bg-anssi { background-color: #e3f2fd; color: #0d47a1; }
-        .bg-cnil { background-color: #f3e5f5; color: #4a148c; }
-        .bg-cisco { background-color: #e8f5e9; color: #1b5e20; }
-        .bg-rootme { background-color: #ffebee; color: #b71c1c; }
+        .hero-section { background: #f8f9fa; padding: 60px 0; }
+        .profile-img { width: 220px; height: 220px; object-fit: cover; border: 5px solid white; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .project-card { transition: transform 0.2s; border: none; border-radius: 10px; }
+        .project-card:hover { transform: scale(1.02); }
+        .section-title { position: relative; padding-bottom: 15px; margin-bottom: 30px; }
+        .section-title::after { content: ''; width: 50px; height: 3px; background: #007bff; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
     </style>
 </head>
-<body class="bg-light">
+<body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container">
     <a class="navbar-brand" href="index.html">Louri Fichou</a>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+        <li class="nav-item active"><a class="nav-link" href="index.html">Accueil</a></li>
         <li class="nav-item"><a class="nav-link" href="Parcours.html">Parcours</a></li>
         <li class="nav-item"><a class="nav-link" href="Compétence.html">Compétences</a></li>
         <li class="nav-item"><a class="nav-link" href="E5.html">E5</a></li>
-        <li class="nav-item active"><a class="nav-link" href="Certifications.html">Certifications</a></li>
+        <li class="nav-item"><a class="nav-link" href="Certifications.html">Certifications</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="container my-5">
-    <div class="text-center mb-5">
-        <h2 class="font-weight-bold">Mes Certifications & MOOCs</h2>
-        <p class="text-muted">Formations complémentaires suivies en autonomie pour approfondir mes compétences en cybersécurité et conformité.</p>
-    </div>
-
-    <div class="row">
-        <!-- ANSSI -->
-        <div class="col-md-6 mb-4">
-            <div class="card shadow-sm cert-card h-100 p-4">
-                <div class="d-flex align-items-start">
-                    <div class="icon-box bg-anssi mr-3">
-                        <i class="fas fa-shield-alt fa-2x"></i>
-                    </div>
-                    <div>
-                        <h5 class="font-weight-bold">ANSSI - SecNumAcadémie</h5>
-                        <p class="text-muted small">Mooc de sensibilisation à la cybersécurité</p>
-                        <ul class="small pl-3">
-                            <li>Panorama de la SSI / Sécurité de l'authentification</li>
-                            <li>Sécurité de l'Internet / Sécurité du poste de travail</li>
-                            <li>Sécurité du nomadisme</li>
-                        </ul>
-                        <span class="badge badge-primary">Validé</span>
-                    </div>
-                </div>
+<!-- Section Présentation -->
+<section class="hero-section text-center text-md-left">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+                <img src="images/index.webp" alt="Louri Fichou" class="rounded-circle profile-img mb-4">
             </div>
-        </div>
-
-        <!-- CNIL -->
-        <div class="col-md-6 mb-4">
-            <div class="card shadow-sm cert-card h-100 p-4">
-                <div class="d-flex align-items-start">
-                    <div class="icon-box bg-cnil mr-3">
-                        <i class="fas fa-user-lock fa-2x"></i>
-                    </div>
-                    <div>
-                        <h5 class="font-weight-bold">CNIL - L'Atelier RGPD</h5>
-                        <p class="text-muted small">Conformité des données personnelles</p>
-                        <ul class="small pl-3">
-                            <li>Le RGPD et ses notions clés</li>
-                            <li>Les principes de la protection des données</li>
-                            <li>Les obligations des professionnels</li>
-                            <li>Les rôles du DPO et mesures de sécurité</li>
-                        </ul>
-                        <span class="badge badge-purple" style="background: #4a148c; color: white;">Certifié</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- CISCO -->
-        <div class="col-md-6 mb-4">
-            <div class="card shadow-sm cert-card h-100 p-4">
-                <div class="d-flex align-items-start">
-                    <div class="icon-box bg-cisco mr-3">
-                        <i class="fas fa-network-wired fa-2x"></i>
-                    </div>
-                    <div>
-                        <h5 class="font-weight-bold">CISCO Networking Academy</h5>
-                        <p class="text-muted small">Introduction à la Cybersécurité</p>
-                        <ul class="small pl-3">
-                            <li>Types de menaces et vulnérabilités réseau</li>
-                            <li>Protection des données et de la confidentialité</li>
-                            <li>Procédés de défense et de détection des intrusions</li>
-                        </ul>
-                        <span class="badge badge-success">Certifié</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Root-Me -->
-        <div class="col-md-6 mb-4">
-            <div class="card shadow-sm cert-card h-100 p-4">
-                <div class="d-flex align-items-start">
-                    <div class="icon-box bg-rootme mr-3">
-                        <i class="fas fa-terminal fa-2x"></i>
-                    </div>
-                    <div>
-                        <h5 class="font-weight-bold">Root-Me (Hacking & Challenge)</h5>
-                        <p class="text-muted small">Plateforme d'entraînement à la sécurité informatique</p>
-                        <p class="small">Résolution de challenges pratiques :</p>
-                        <div class="d-flex flex-wrap">
-                            <span class="badge badge-outline-dark border mr-1 mb-1">Web-Client</span>
-                            <span class="badge badge-outline-dark border mr-1 mb-1">App-Script</span>
-                            <span class="badge badge-outline-dark border mr-1 mb-1">Network</span>
-                        </div>
-                        <p class="mt-2 mb-0"><a href="https://www.root-me.org/louri?lang=fr#9c69bceae5fd82b16d519d3898a821c6" target="_blank" class="btn btn-sm btn-danger">Mon profil</a></p>
-                    </div>
+            <div class="col-md-8">
+                <h1 class="display-4 font-weight-bold">Louri Fichou</h1>
+                <h3 class="text-primary">Développeur Informatique - BTS SIO SLAM</h3>
+                <p class="lead mt-3">Spécialisé en développement Python et C#, avec une forte culture en cybersécurité (ANSSI, RGPD, Root-Me).</p>
+                <div class="mt-4">
+                    <!-- Vérifie que ton fichier s'appelle exactement CV.pdf dans le dossier images -->
+                    <a href="images/CV.pdf" class="btn btn-primary btn-lg shadow-sm" download><i class="fas fa-file-pdf"></i> Télécharger CV</a>
+                    <a href="#projets" class="btn btn-outline-dark btn-lg ml-md-2">Découvrir mes projets</a>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<!-- Section Mes Projets -->
+<section id="projets" class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center font-weight-bold section-title">Mes Projets</h2>
+        
+        <!-- Projets de formation -->
+        <h4 class="mb-4 text-muted"><i class="fas fa-graduation-cap"></i> Formation & Académique</h4>
+        <div class="row">
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 shadow-sm project-card">
+                    <div class="card-body">
+                        <h6 class="font-weight-bold text-primary">Projet EGNARO</h6>
+                        <p class="small text-muted">Hébergement site web egnaro.</p>
+                        <p class="card-text">Projet x : [Ton explication ici...]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 shadow-sm project-card">
+                    <div class="card-body">
+                        <h6 class="font-weight-bold text-primary">Métiers BTS SIO</h6>
+                        <p class="small text-muted">Étude des débouchés.</p>
+                        <p class="card-text">Projet x : [Ton explication ici...]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 shadow-sm project-card">
+                    <div class="card-body">
+                        <h6 class="font-weight-bold text-primary">FLD Animation</h6>
+                        <p class="small text-muted">Animation au sein du lycée.</p>
+                        <p class="card-text">Projet x : [Ton explication ici...]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 shadow-sm project-card">
+                    <div class="card-body">
+                        <h6 class="font-weight-bold text-primary">Jeux semaine LDC</h6>
+                        <p class="small text-muted">Développement de mini-jeux.</p>
+                        <p class="card-text">Projet x : [Ton explication ici...]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Réalisations en milieu professionnel -->
+        <h4 class="mt-4 mb-4 text-muted"><i class="fas fa-briefcase"></i> Expériences chez Orange Innov</h4>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm project-card border-left border-info">
+                    <div class="card-body">
+                        <h6 class="font-weight-bold text-info">Projet Status CI/CD</h6>
+                        <p class="small text-muted">Automatisation et déploiement.</p>
+                        <p class="card-text">Projet x : [Ton explication ici...]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm project-card border-left border-info">
+                    <div class="card-body">
+                        <h6 class="font-weight-bold text-info">Rapport d'activité</h6>
+                        <p class="small text-muted">Automatisation des rapports d'équipe.</p>
+                        <p class="card-text">Projet x : [Ton explication ici...]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm project-card border-left border-info">
+                    <div class="card-body">
+                        <h6 class="font-weight-bold text-info">Bandeau information</h6>
+                        <p class="small text-muted">Composant d'affichage dynamique.</p>
+                        <p class="card-text">Projet x : [Ton explication ici...]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="E5.html" class="btn btn-outline-primary">Détails techniques (Tableau E5)</a>
+        </div>
+    </div>
+</section>
 
 <footer class="bg-dark text-white text-center py-4">
     <p class="mb-0">© 2026 - Louri Fichou</p>
 </footer>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
