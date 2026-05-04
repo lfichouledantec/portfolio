@@ -3,145 +3,434 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Louri Fichou | Accueil</title>
+    <title>Louri Fichou | Portfolio</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <style>
+        html { scroll-behavior: smooth; }
+        body { padding-top: 56px; }
+        section { padding: 80px 0; }
         .hero-section { background: #f8f9fa; padding: 60px 0; }
         .profile-img { width: 220px; height: 220px; object-fit: cover; border: 5px solid white; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .project-card { transition: transform 0.2s; border: none; border-radius: 10px; }
-        .project-card:hover { transform: scale(1.02); }
-        .section-title { position: relative; padding-bottom: 15px; margin-bottom: 30px; }
+        .project-card { transition: transform 0.2s; border: none; border-radius: 10px; cursor: pointer; overflow: hidden; }
+        .project-card:hover { transform: scale(1.02); box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important; }
+        .section-title { position: relative; padding-bottom: 15px; margin-bottom: 30px; text-align: center; }
         .section-title::after { content: ''; width: 50px; height: 3px; background: #007bff; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+        .modal-lg { max-width: 80%; }
+        .card-img-top { height: 160px; object-fit: contain; background: #fdfdfd; }
+        .competence-tag { font-size: 0.75rem; background: #f1f3f5; border-left: 3px solid #007bff; padding: 4px 10px; margin-bottom: 5px; display: inline-block; border-radius: 0 4px 4px 0; font-weight: 500; color: #495057; width: 100%; }
+        .cert-card { transition: transform 0.3s; border: none; border-radius: 15px; }
+        .cert-card:hover { transform: translateY(-10px); }
+        .icon-box { width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+        .bg-anssi { background-color: #e3f2fd; color: #0d47a1; }
+        .bg-cnil { background-color: #f3e5f5; color: #4a148c; }
+        .bg-cisco { background-color: #e8f5e9; color: #1b5e20; }
+        .bg-rootme { background-color: #ffebee; color: #b71c1c; }
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="index.html">Louri Fichou</a>
+    <a class="navbar-brand" href="#accueil">Louri Fichou</a>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active"><a class="nav-link" href="index.html">Accueil</a></li>
-        <li class="nav-item"><a class="nav-link" href="Parcours.html">Parcours</a></li>
-        <li class="nav-item"><a class="nav-link" href="Compétence.html">Compétences</a></li>
+        <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="#parcours">Parcours</a></li>
+        <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
         <li class="nav-item"><a class="nav-link" href="E5.html">E5</a></li>
-        <li class="nav-item"><a class="nav-link" href="Certifications.html">Certifications</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Section Présentation -->
-<section class="hero-section text-center text-md-left">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-4 text-center">
-                <img src="images/index.webp" alt="Louri Fichou" class="rounded-circle profile-img mb-4">
-            </div>
-            <div class="col-md-8">
-                <h1 class="display-4 font-weight-bold">Louri Fichou</h1>
-                <h3 class="text-primary">Développeur Informatique - BTS SIO SLAM</h3>
-                <p class="lead mt-3">Spécialisé en développement Python et C#, avec une forte culture en cybersécurité (ANSSI, RGPD, Root-Me).</p>
-                <div class="mt-4">
-                    <!-- Vérifie que ton fichier s'appelle exactement CV.pdf dans le dossier images -->
-                    <a href="images/CV.pdf" class="btn btn-primary btn-lg shadow-sm" download><i class="fas fa-file-pdf"></i> Télécharger CV</a>
-                    <a href="#projets" class="btn btn-outline-dark btn-lg ml-md-2">Découvrir mes projets</a>
+<!-- SECTION 1 : ACCUEIL & PROJETS -->
+<section id="accueil">
+    <div class="hero-section text-center text-md-left">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center">
+                    <img src="images/index.webp" alt="Louri Fichou" class="rounded-circle profile-img mb-4">
+                </div>
+                <div class="col-md-8">
+                    <h1 class="display-4 font-weight-bold">Louri Fichou</h1>
+                    <h3 class="text-primary">Développeur Informatique - BTS SIO SLAM</h3>
+                    <p class="lead mt-3">Passionné par le développement applicatif et l'automatisation. Spécialisé en Python et C#, avec une solide culture en cybersécurité et gestion d'API.</p>
+                    <div class="mt-4">
+                        <a href="images/CV.pdf" class="btn btn-primary btn-lg shadow-sm" download><i class="fas fa-file-pdf"></i> Télécharger CV</a>
+                        <a href="#projets" class="btn btn-outline-dark btn-lg ml-md-2">Découvrir mes projets</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
 
-<!-- Section Mes Projets -->
-<section id="projets" class="py-5 bg-white">
-    <div class="container">
-        <h2 class="text-center font-weight-bold section-title">Mes Projets</h2>
-        
-        <!-- Projets de formation -->
-        <h4 class="mb-4 text-muted"><i class="fas fa-graduation-cap"></i> Formation & Académique</h4>
+    <div id="projets" class="container py-5">
+        <h2 class="font-weight-bold section-title">Expériences & Réalisations</h2>
+        <h4 class="mb-4 text-muted"><i class="fas fa-briefcase"></i> Stages Professionnels</h4>
+        <div class="row mb-5">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm project-card border-left border-primary" data-toggle="modal" data-target="#modalStage2">
+                    <div class="card-body">
+                        <h5 class="font-weight-bold text-primary">Stage Jeux Lycée (2026)</h5>
+                        <p class="card-text">Projet professionnel de fin d'études.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm project-card border-left border-info" data-toggle="modal" data-target="#modalStage1">
+                    <div class="card-body">
+                        <h5 class="font-weight-bold text-info">Stage Orange Innov (2025)</h5>
+                        <p class="card-text">Immersion dans l'innovation technologique.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="mt-4 mb-4 text-muted"><i class="fas fa-microchip"></i> Réalisations Orange Innov</h4>
+        <div class="row mb-5">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm project-card border-bottom border-info" data-toggle="modal" data-target="#modalStatus">
+                    <div class="card-body text-center">
+                        <h6 class="font-weight-bold text-info">Projet Status CI/CD</h6>
+                        <p class="card-text small text-muted">Pilotage matériel via API.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm project-card border-bottom border-info" data-toggle="modal" data-target="#modalRapport">
+                    <div class="card-body text-center">
+                        <h6 class="font-weight-bold text-info">Automatisation Rapport</h6>
+                        <p class="card-text small text-muted">Extraction de données Python.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm project-card border-bottom border-info" data-toggle="modal" data-target="#modalBandeau">
+                    <div class="card-body text-center">
+                        <h6 class="font-weight-bold text-info">Bandeau d'information</h6>
+                        <p class="card-text small text-muted">Développement Front dynamique.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="mb-4 text-muted"><i class="fas fa-graduation-cap"></i> Projets Académiques</h4>
         <div class="row">
             <div class="col-md-6 col-lg-3 mb-4">
-                <div class="card h-100 shadow-sm project-card">
+                <div class="card h-100 shadow-sm project-card" data-toggle="modal" data-target="#modalEgnaro">
+                    <img src="images/egnaro-reseau.webp" class="card-img-top p-2" alt="Egnaro">
                     <div class="card-body">
                         <h6 class="font-weight-bold text-primary">Projet EGNARO</h6>
-                        <p class="small text-muted">Hébergement site web Egnaro.</p>
-                        <p class="card-text">Réalisation d'un intranet pour une entreprise fictive incluant la configuration et l'hébergement de services web.</p>
+                        <p class="card-text small">Infrastructure réseau complète.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 mb-4">
-                <div class="card h-100 shadow-sm project-card">
+                <div class="card h-100 shadow-sm project-card" data-toggle="modal" data-target="#modalMetiers">
                     <div class="card-body">
                         <h6 class="font-weight-bold text-primary">Métiers BTS SIO</h6>
-                        <p class="small text-muted">Étude des débouchés.</p>
-                        <p class="card-text">Conception d'un site web répertoriant les différents métiers et opportunités de carrière après un BTS SIO.</p>
+                        <p class="card-text small">Portail web d'orientation.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 mb-4">
-                <div class="card h-100 shadow-sm project-card">
+                <div class="card h-100 shadow-sm project-card" data-toggle="modal" data-target="#modalFLD">
                     <div class="card-body">
                         <h6 class="font-weight-bold text-primary">FLD Animation</h6>
-                        <p class="small text-muted">Animation au sein du lycée.</p>
-                        <p class="card-text">Développement d'une plateforme web permettant aux élèves de s'inscrire à diverses animations (ex: ateliers cuisine).</p>
+                        <p class="card-text small">Gestion d'ateliers PHP/SQL.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 mb-4">
-                <div class="card h-100 shadow-sm project-card">
+                <div class="card h-100 shadow-sm project-card" data-toggle="modal" data-target="#modalLDC">
                     <div class="card-body">
                         <h6 class="font-weight-bold text-primary">Jeux semaine LDC</h6>
-                        <p class="small text-muted">Développement de mini-jeux.</p>
-                        <p class="card-text">Création d'une application mobile de défis hebdomadaires. Les points cumulés permettent d'obtenir des indices pour un Cluedo géant.</p>
+                        <p class="card-text small">Application de défis ludiques.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 2 : PARCOURS -->
+<section id="parcours" class="bg-light">
+    <div class="container py-5">
+        <h2 class="text-center mb-5 font-weight-bold section-title">Mon Parcours</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <h4 class="text-primary border-bottom pb-2 mb-4">Formation</h4>
+                <div class="card shadow-sm border-0 mb-3">
+                    <div class="card-body">
+                        <h5>BTS SIO (SLAM)</h5>
+                        <p class="text-muted">2024-2026 | Lycée Félix Le Dantec (Lannion)</p>
+                    </div>
+                </div>
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <h5>BAC Général</h5>
+                        <p class="text-muted">2024 | Lycée Cesson Sévigné</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h4 class="text-success border-bottom pb-2 mb-4">Expériences Professionnelles</h4>
+                <div class="card border-left border-success shadow-sm mb-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between"><h5>Stage Jeux Lycée</h5><span class="badge badge-success">2026</span></div>
+                        <p class="small">Développement d'une application de défis ludiques.</p>
+                    </div>
+                </div>
+                <div class="card border-left border-success shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between"><h5>Stage Orange Innov</h5><span class="badge badge-success">2025</span></div>
+                        <p class="small">Innovation technologique et automatisation Python.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 3 : COMPÉTENCES -->
+<section id="competences" class="bg-white">
+    <div class="container py-5">
+        <h2 class="text-center mb-5 font-weight-bold section-title">Compétences Techniques</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <h4>Langages</h4>
+                <p class="mb-1">Python</p>
+                <div class="progress mb-3"><div class="progress-bar bg-primary" style="width: 90%"></div></div>
+                <p class="mb-1">C#</p>
+                <div class="progress mb-3"><div class="progress-bar bg-primary" style="width: 80%"></div></div>
+                <p class="mb-1">PHP (Symfony) / SQL</p>
+                <div class="progress mb-3"><div class="progress-bar bg-primary" style="width: 70%"></div></div>
+            </div>
+            <div class="col-md-6">
+                <h4>Outils & Méthodes</h4>
+                <ul class="list-group shadow-sm">
+                    <li class="list-group-item"><i class="fas fa-check text-success"></i> Git / GitLab (CI/CD)</li>
+                    <li class="list-group-item"><i class="fas fa-check text-success"></i> Docker & Environnements Dev</li>
+                    <li class="list-group-item"><i class="fas fa-check text-success"></i> API REST & Tests Unitaires</li>
+                    <li class="list-group-item"><i class="fas fa-check text-success"></i> Référencement (SEO) & Agilité</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mt-5 pt-4">
+            <div class="col-12">
+                <h4 class="border-bottom pb-2 mb-4">Veille Technologique & Cybersécurité</h4>
+                <div class="card shadow-sm border-info bg-white">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-md-2 text-center">
+                                <i class="fas fa-rss-square fa-4x text-info"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <h5>Auto-formation continue</h5>
+                                <p>Suivi quotidien de l'actualité informatique et sécuritaire via des flux spécialisés :</p>
+                                <span class="badge badge-info mr-1">Chaîne UNDERSCORE</span>
+                                <span class="badge badge-info mr-1">Google Notifications (Mots clés IT)</span>
+                                <span class="badge badge-info mr-1">ANSSI Actualités</span>
+                                <span class="badge badge-info">Cisco CyberTrends</span>
+                                <p class="mt-2 text-muted small"><i class="fas fa-tag"></i> Bloc 1.6 : Organiser son développement professionnel</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Réalisations en milieu professionnel -->
-        <h4 class="mt-4 mb-4 text-muted"><i class="fas fa-briefcase"></i> Expériences chez Orange Innov</h4>
+        <h4 class="border-bottom pb-2 mb-4 mt-5 pt-4">Certifications & MOOCs</h4>
         <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm project-card border-left border-info">
-                    <div class="card-body">
-                        <h6 class="font-weight-bold text-info">Projet Status CI/CD</h6>
-                        <p class="small text-muted">Visualisation réseau.</p>
-                        <p class="card-text">Pilotage d'un feu tricolore physique pour afficher en temps réel l'état de la pipeline de déploiement de l'équipe.</p>
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm cert-card h-100 p-4 bg-white">
+                    <div class="d-flex align-items-start">
+                        <div class="icon-box bg-anssi mr-3"><i class="fas fa-shield-alt fa-2x"></i></div>
+                        <div>
+                            <h5 class="font-weight-bold">ANSSI - SecNumAcadémie</h5>
+                            <p class="text-muted small">Mooc de sensibilisation à la cybersécurité</p>
+                            <span class="badge badge-primary">Validé</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm project-card border-left border-info">
-                    <div class="card-body">
-                        <h6 class="font-weight-bold text-info">Rapport d'activité</h6>
-                        <p class="small text-muted">Automatisation de données.</p>
-                        <p class="card-text">Développement d'un script d'extraction de statistiques (lignes de code, commits) pour automatiser les rapports semestriels du maître de stage.</p>
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm cert-card h-100 p-4 bg-white">
+                    <div class="d-flex align-items-start">
+                        <div class="icon-box bg-cnil mr-3"><i class="fas fa-user-lock fa-2x"></i></div>
+                        <div>
+                            <h5 class="font-weight-bold">CNIL - L'Atelier RGPD</h5>
+                            <p class="text-muted small">Conformité des données personnelles</p>
+                            <span class="badge badge-purple" style="background: #4a148c; color: white;">Certifié</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm project-card border-left border-info">
-                    <div class="card-body">
-                        <h6 class="font-weight-bold text-info">Bandeau d'information</h6>
-                        <p class="small text-muted">Composant d'interface.</p>
-                        <p class="card-text">Création d'un bandeau dynamique intégré au navigateur, diffusant des informations en continu, à la manière des chaînes d'information.</p>
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm cert-card h-100 p-4 bg-white">
+                    <div class="d-flex align-items-start">
+                        <div class="icon-box bg-cisco mr-3"><i class="fas fa-network-wired fa-2x"></i></div>
+                        <div>
+                            <h5 class="font-weight-bold">CISCO Networking Academy</h5>
+                            <p class="text-muted small">Introduction à la Cybersécurité</p>
+                            <span class="badge badge-success">Certifié</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="text-center mt-4">
-            <a href="E5.html" class="btn btn-outline-primary">Détails techniques (Tableau E5)</a>
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm cert-card h-100 p-4 bg-white">
+                    <div class="d-flex align-items-start">
+                        <div class="icon-box bg-rootme mr-3"><i class="fas fa-terminal fa-2x"></i></div>
+                        <div>
+                            <h5 class="font-weight-bold">Root-Me (Hacking)</h5>
+                            <p class="text-muted small">Challenges pratiques : Web, Script, Réseau.</p>
+                            <a href="https://www.root-me.org/louri" target="_blank" class="btn btn-sm btn-danger">Mon profil</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
+<!-- MODALES -->
+<div class="modal fade" id="modalStatus" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-info text-white"><h5 class="modal-title font-weight-bold">Status CI/CD</h5><button type="button" class="close text-white" data-dismiss="modal">&times;</button></div>
+        <div class="modal-body">
+            <p>Pilotage d'un feu tricolore physique via API GitLab pour le monitoring des tests.</p>
+            <hr>
+            <h6><strong>Compétences (Bloc 1) :</strong></h6>
+            <div class="competence-tag">Support : Traiter des demandes applicatives</div>
+            <div class="competence-tag">Service : Déployer un service informatique</div>
+            <div class="competence-tag">Projet : Planifier les activités</div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalRapport" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-info text-white"><h5 class="modal-title font-weight-bold">Rapport d'activity</h5><button type="button" class="close text-white" data-dismiss="modal">&times;</button></div>
+        <div class="modal-body">
+            <p>Automatisation de l'extraction de stats de production via Python.</p>
+            <hr>
+            <h6><strong>Compétences (Bloc 1) :</strong></h6>
+            <div class="competence-tag">Projet : Analyser les modalités d'organisation</div>
+            <div class="competence-tag">Dév. Pro : Mettre en œuvre une veille techno</div>
+            <div class="competence-tag">Patrimoine : Recenser les ressources numériques</div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalBandeau" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-info text-white"><h5 class="modal-title font-weight-bold">Bandeau d'information</h5><button type="button" class="close text-white" data-dismiss="modal">&times;</button></div>
+        <div class="modal-body">
+            <p>Composant Web dynamique pour la diffusion d'infos techniques en interne.</p>
+            <hr>
+            <h6><strong>Compétences (Bloc 1) :</strong></h6>
+            <div class="competence-tag">Web : Participer à l'évolution d'un site</div>
+            <div class="competence-tag">Support : Gérer des demandes d'évolution</div>
+            <div class="competence-tag">Service : Accompagner les utilisateurs</div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalEgnaro" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white"><h5 class="modal-title font-weight-bold">Architecture EGNARO</h5><button type="button" class="close text-white" data-dismiss="modal">&times;</button></div>
+      <div class="modal-body text-center">
+        <img src="images/egnaro-reseau.webp" class="img-fluid rounded mb-3 shadow" alt="Schéma">
+        <div class="text-left px-3 mt-4">
+            <h6><strong>Compétences (Bloc 1) :</strong></h6>
+            <div class="competence-tag">Patrimoine : Assurer la continuité de service</div>
+            <div class="competence-tag">Support : Traiter des demandes réseau et système</div>
+            <div class="competence-tag">Service : Déployer un service (DHCP, NAT)</div>
+            <div class="competence-tag">Patrimoine : Vérifier les niveaux d'habilitation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalMetiers" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white"><h5 class="modal-title font-weight-bold">Métiers BTS SIO</h5><button type="button" class="close text-white" data-dismiss="modal">&times;</button></div>
+        <div class="modal-body">
+            <p>Site web d'orientation présentant les carrières informatiques.</p>
+            <hr>
+            <h6><strong>Compétences (Bloc 1) :</strong></h6>
+            <div class="competence-tag">Web : Valoriser l'image de l'organisation</div>
+            <div class="competence-tag">Dév. Pro : Développer son projet professionnel</div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalFLD" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white"><h5 class="modal-title font-weight-bold">FLD Animation</h5><button type="button" class="close text-white" data-dismiss="modal">&times;</button></div>
+        <div class="modal-body">
+            <p>Outil d'inscription aux ateliers pédagogiques (Stack PHP/MySQL).</p>
+            <hr>
+            <h6><strong>Compétences (Bloc 1) :</strong></h6>
+            <div class="competence-tag">Projet : Planifier les activités</div>
+            <div class="competence-tag">Support : Traiter des demandes applicatives</div>
+            <div class="competence-tag">Service : Accompagner les utilisateurs</div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalLDC" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white"><h5 class="modal-title font-weight-bold">Jeux semaine LDC</h5><button type="button" class="close text-white" data-dismiss="modal">&times;</button></div>
+        <div class="modal-body">
+            <p>Application de défis ludiques avec suivi de score en temps réel.</p>
+            <hr>
+            <h6><strong>Compétences (Bloc 1) :</strong></h6>
+            <div class="competence-tag">Web : Faire évoluer un service en ligne</div>
+            <div class="competence-tag">Projet : Évaluer les indicateurs de suivi</div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalStage2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white"><h5 class="modal-title font-weight-bold">Stage Jeux Lycée (2026)</h5><button type="button" class="close text-white" data-dismiss="modal">&times;</button></div>
+        <div class="modal-body">
+            <p>Mission de développement et intégration en milieu pro.</p>
+            <hr>
+            <h6><strong>Compétences (Bloc 1) :</strong></h6>
+            <div class="competence-tag">Service : Réaliser des tests d'intégration</div>
+            <div class="competence-tag">Dév. Pro : Gérer son identité professionnelle</div>
+            <div class="competence-tag">Projet : Analyser les objectifs et modalités</div>
+        </div>
+      </div>
+    </div>
+</div>
 
 <footer class="bg-dark text-white text-center py-4 mt-auto">
     <p class="mb-0">© 2026 - Louri Fichou</p>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
